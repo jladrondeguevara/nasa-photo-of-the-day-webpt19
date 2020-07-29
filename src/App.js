@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import PhotoContainer from "./Components/PhotoContainer"
 
 function App() {
+  const [data, setData] = useState([]);
   // https://api.nasa.gov/planetary/apod?date=2020-07-20&api_key=du2094KoA7O0AlngvxSkX6zMqoaJBeNTyr6oH4Sj
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?date=2020-07-28&api_key=du2094KoA7O0AlngvxSkX6zMqoaJBeNTyr6oH4Sj')
@@ -18,6 +19,7 @@ function App() {
   return (    
     <div className="App">
       <Header />
+      <PhotoContainer props = response/>
     </div>
   );
 }
