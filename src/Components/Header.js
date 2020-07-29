@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-
-const Header = () => {
+export default function Header() {
     return (
-        console.log("header")
-    )
-}
-
-export default Header();
+        <div className = "header">
+            <h1>Picture Of The Day</h1>
+        </div>
+    );
+};
